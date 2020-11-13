@@ -1,9 +1,9 @@
 # Sidebar navigation
 
-- label: 'Introduction'
+- label: 'Hello World'
   link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
+- label: 'PROGRAM-ID'
+  link: '/program-id'
 - label: Usage
   items:
     - label: 'Creating docs'
