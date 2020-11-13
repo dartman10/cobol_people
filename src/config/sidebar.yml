@@ -8,10 +8,10 @@
   items:
     - label: 'EXIT PERFORM'
       link: '/usage/exit-perform'
-    - label: 'Navigation'
-      link: '/usage/navigation'
-    - label: 'Shadowing'
-      link: '/usage/shadowing'
+    - label: 'DATE YYYYMMDD'
+      link: '/usage/date-yyyymmdd'
+    - label: 'S0C7'
+      link: '/usage/s0c7'
 - label: More
   items:
     - label: FAQ
