@@ -2,12 +2,12 @@
 
 - label: 'Hello World'
   link: '/'
-- label: 'PROGRAM-ID'
-  link: '/program-id'
-- label: Usage
+- label: ''
+  link: ''
+- label: COBOLISH
   items:
-    - label: 'Creating docs'
-      link: '/usage/creating-docs'
+    - label: 'EXIT PERFORM'
+      link: '/usage/exit-perform'
     - label: 'Navigation'
       link: '/usage/navigation'
     - label: 'Shadowing'
