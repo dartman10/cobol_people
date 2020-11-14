@@ -1,0 +1,38 @@
+---
+title: COBOL Subprogram
+date: "2020-11-11T22:12:03.284Z"
+description: "Subprogram it if you like."
+---
+**COBOL nested programs and global variables**
+
+    *+-------------------------------------------------+
+    *|  This program calls a nested program to display | 
+    *|  the compiled date.                             |
+    *+-------------------------------------------------+
+
+      IDENTIFICATION DIVISION.
+      PROGRAM-ID.    MAIN.
+      AUTHOR.        T-REXY.
+      DATE-WRITTEN.  2020-11-11.
+      DATE-COMPILED. Ask the nested program.
+
+      PROCEDURE DIVISION.
+        DISPLAY "Start of run"
+        CALL "NESTED"
+        GOBACK
+        .
+
+      IDENTIFICATION DIVISION.
+      PROGRAM-ID.    NESTED.
+      PROCEDURE DIVISION.
+        DISPLAY "Start of run"
+        CALL "NESTED"
+        GOBACK
+        .
+
+      
+      END PROGRAM MAIN.
+  
+
+
+***Tags : COBOL SUBPROGRAM GLOBAL VARIABLE***
