@@ -12,6 +12,8 @@
       link: '/usage/date-yyyymmdd'
     - label: 'S0C7'
       link: '/usage/s0c7'
+    - label: 'HEX-OF'
+      link: '/usage/hex-of'
 - label: More
   items:
     - label: FAQ
