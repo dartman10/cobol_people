@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `Cobol People dot com`,
-    defaultTitle: `cobol_people`,
-    siteTitleShort: `cobol_people`,
+    siteTitle: `Cobol-People`,
+    defaultTitle: `cobol-people`,
+    siteTitleShort: `cobol-people`,
     siteDescription: `CobolPeople.com - the people of Cobol unite.`,
     siteUrl: `https://CobolPeople.com`,
     siteAuthor: `@rocketseat`,
