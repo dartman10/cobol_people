@@ -4,7 +4,7 @@ import React from 'react';
 import rocketseatLogo from 'assets/trexy002.png';
 
 const Logo = () => (
-  <img src={rocketseatLogo} alt="Rocketseat logo" style={{ width: 180 }} />
+  <img src={rocketseatLogo} alt="T-Rexy" style={{ width: 180 }} />
 );
 
 export default Logo;
