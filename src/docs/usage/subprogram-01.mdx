@@ -11,28 +11,29 @@ description: "Subprogram it if you like."
     *+-------------------------------------------------+
 
       IDENTIFICATION DIVISION.
-      PROGRAM-ID.    MAIN.
-      AUTHOR.        T-REXY.
-      DATE-WRITTEN.  2020-11-11.
+      PROGRAM-ID. MAIN.
+      AUTHOR. T-REXY.
+      DATE-WRITTEN. 2020-11-11.
       DATE-COMPILED. Ask the nested program.
-
       PROCEDURE DIVISION.
-        DISPLAY "Start of run"
+        DISPLAY "Start of MAIN program"
         CALL "NESTED"
         GOBACK
         .
-
       IDENTIFICATION DIVISION.
-      PROGRAM-ID.    NESTED.
+      PROGRAM-ID. NESTED.
+      DATA DIVISION.
+      WORKING-STORAGE SECTION.
+        01 WS-WHEN-COMPILED.                                         
+          05 WS-COMPILE-DATE  PIC X(8) VALUE 'YYYYMMDD'.
+          05 WS-COMPILE-TIME  PIC X(13) VALUE 'HHMMSSNNNNNNN'.
       PROCEDURE DIVISION.
-        DISPLAY "Start of run"
-        CALL "NESTED"
-        GOBACK
+        DISPLAY "Start of NESTED program"
+        MOVE WHEN-COMPILED TO WS-WHEN-COMPILED
+        DISPLAY "Compiled on " WS-WHEN-COMPILED
+        EXIT PROGRAM
         .
-
-      
+      END PROGRAM NESTED.
       END PROGRAM MAIN.
   
-
-
 ***Tags : COBOL SUBPROGRAM GLOBAL VARIABLE***

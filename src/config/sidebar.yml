@@ -14,6 +14,8 @@
       link: '/usage/s0c7'
     - label: 'HEX-OF'
       link: '/usage/hex-of'
+    - label: 'NESTED PROGRAM'
+      link: '/usage/subprogram-01'
 - label: More
   items:
     - label: FAQ
