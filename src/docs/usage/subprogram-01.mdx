@@ -17,7 +17,7 @@ description: "Subprogram it if you like."
       DATE-COMPILED. Ask the nested program.
       PROCEDURE DIVISION.
         DISPLAY "Start of MAIN program"
-        CALL "NESTED"
+        CALL "NESTED" END-CALL
         GOBACK
         .
       IDENTIFICATION DIVISION.
@@ -25,8 +25,8 @@ description: "Subprogram it if you like."
       DATA DIVISION.
       WORKING-STORAGE SECTION.
         01 WS-WHEN-COMPILED.                                         
-          05 WS-COMPILE-DATE  PIC X(8) VALUE 'YYYYMMDD'.
-          05 WS-COMPILE-TIME  PIC X(13) VALUE 'HHMMSSNNNNNNN'.
+          05 WS-COMPILE-DATE  PIC X(8) VALUE 'MM/DD/YY'.
+          05 WS-COMPILE-TIME  PIC X(8) VALUE 'HH.MM.SS'.
       PROCEDURE DIVISION.
         DISPLAY "Start of NESTED program"
         MOVE WHEN-COMPILED TO WS-WHEN-COMPILED
