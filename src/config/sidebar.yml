@@ -20,7 +20,7 @@
   items:
     - label: FAQ
       link: /faq
-    - label: Changelog
+    - label: Summary of Changes
       link: /changelog
 - label: Community
   items:
