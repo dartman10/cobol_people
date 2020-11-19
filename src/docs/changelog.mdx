@@ -8,56 +8,91 @@ description: IBM z/OS COBOL summary of changes
 
 ## 6.3
 
-- `SET TO FALSE` is new. Previously, only TRUE is allowed;
 - DYNAMIC LENGTH elementary item;
+- Passing a file during CALL was deleted, but then restored; :)
+- Go to official [IBM site](https://www.ibm.com/support/knowledgecenter/en/SS6SG3_6.3.0/lr/rlsummvs.html) for complete changes.
+
+
+## 6.2
+
+- SET TO FALSE is new. Previously, only TRUE is allowed;
+- TRIM intrinsic function;
+- BIT-OF intrinsic function;
+- HEX-OF intrinsic function;
+- E intrinsic function, natural logarithm;
+- PI intrinsic function;
 - UUID4 - returns version 4 universally unique identifier;
-- Passing a file during CALL was restored; :)
+- BIT-TO-CHAR intrinsic function
+- HEX-TO-CHAR intrinsic function
+- ABS intrinsic function
+- BYTE-LENGTH intrinsic function
+- EXP intrinsic function
+- EXP10 intrinsic function
+- NUMVAL-F intrinsic function
+- SIGN intrinsic function
+- TEST-NUMVAL intrinsic function
+- TEST-NUMVAL-C intrinsic function
+- TEST-NUMVAL-F intrinsic function
+- JSON PARSE converts JSON text to COBOL data formats
 - Go to official [IBM site](https://www.ibm.com/support/knowledgecenter/en/SS6SG3_6.2.0/lr/rlsummvs.html) for complete changes.
 
-### Docs
 
-- Add an example on how to use a png for the logo image;
-- Add `npx` prefix on gatsby new command.
+## 6.1
 
-### New
+- INITIALIZE can initialize FILLER;
+- INITIALIZE can set literal values specified in VALUE clause;
+- JSON GENERATE converts data to JSON format
+- Go to official [IBM site](https://www.ibm.com/support/knowledgecenter/en/SS6SG3_6.1.0/lr/rlsummvs.html) for complete changes.
 
-## 2.2.3
 
-- Bump package version.
-
-## 2.2.2
-
-- Adjusts code blocks on mobile;
-- Fixed issue with the background color on blockquotes;
-- Include code badge for `yml`;
-- Change theme default colors.
-
-## 2.2.1
+## 5.2
 
 - Fixed build issue from 2.2.0 caused by PropTypes on a file;
+- COPY/REPLACE added options LEADING and TRAILING;
+- EXIT PERFORM for exiting from an inline PERFORM;
+- EXIT PARAGRAPH; 
+- EXIT SECTION;
+- SORT to rearrange table elements;
+- Go to official [IBM site](http://publibfp.boulder.ibm.com/epubs/pdf/igy5lr20.pdf) for complete changes.
 
-## 2.2.0
 
-### New
+## 5.1
 
-- Adds `withMdx` option, to opt-in for the default configuration;
-- Adds `branch` option, to change the default branch name;
-- Add support for responsive tables;
-- Show active elements on Table of Contents;
-- Add support for highlight code blocks;
-- Changed responsive menu on mobile;
-- Add `LiveCodeScope` to easily add elements to React Live scope.
+- `*>`  inline comment indicator;
+- UNBOUNDED option for OCCURS DEPENDING ON;
+- XML-INFORMATION new special register; 
+- Go to official [IBM site](http://publibfp.boulder.ibm.com/epubs/pdf/igy5lr11.pdf) for complete changes.
 
-### Removed
 
-- Removed `footer` message from left sidebar (you can still keep it, but it
-  won't be displayed on the website).
+## 4.2
 
-### Other
+-  `_` underscore character support for user-defined words like data-names;
+- XML PARSE improvement;
+- Go to official [IBM site](http://publibfp.boulder.ibm.com/epubs/pdf/igy3lr50.pdf) for complete changes.
 
-- Updated project logo and favicon;
-- Layout improvements;
-  - Aligned on center;
-  - Removed Roboto as the default font;
-- Update `gatsby-remark-embedder` to 3.0.0;
-- Changed theme colors object.
+
+## 4.1
+
+- XML GENERATE improvement;
+- XML PARSE enhancement;
+- Go to official [IBM site](http://publibfp.boulder.ibm.com/epubs/pdf/igy3lr40.pdf) for complete changes.
+
+
+## 3.4
+
+- TBD
+
+
+## 3.3
+
+- TBD
+
+
+## 3.2
+
+- TBD
+
+
+## 3.1
+
+- TBD
