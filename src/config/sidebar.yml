@@ -18,10 +18,10 @@
       link: '/usage/subprogram-01'
 - label: More
   items:
-    - label: FAQ
-      link: /faq
     - label: Summary of Changes
       link: /changelog
+    - label: FAQ
+      link: /faq
 - label: Community
   items:
     - label: 'Github'
