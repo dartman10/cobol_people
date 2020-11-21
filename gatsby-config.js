@@ -5,7 +5,7 @@ module.exports = {
     siteTitleShort: `cobol-people`,
     siteDescription: `CobolPeople.com - the people of Cobol unite.`,
     siteUrl: `https://CobolPeople.com`,
-    siteAuthor: `@rocketseat`,
+    siteAuthor: `@TRexy`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
     themeColor: `#8257E6`,
