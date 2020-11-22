@@ -1,28 +1,100 @@
 ---
 title: EXIT PERFORM
 date: "2020-10-24T22:12:03.284Z"
+disableTableOfContents: true
 description: "When to use COBOL EXIT PERFORM"
 ---
 
+## When to use EXIT PERFORM?
 
-**When to use EXIT PERFORM?**
+    1000-COBOL-SEARCH SECTION.
+      MOVE 'WIDGET' TO WS-SEARCH-VALUE  
+      MOVE 0 TO WS-INDEX  
+      PERFORM 999999999 TIMES        *> Endless inline perform
+        ADD 1 TO WS-INDEX  
+        IF WS-INDEX > WS-ARRAY-SIZE  *> Avoid array overflow  
+          DISPLAY "Reached end of array. None found."  
+          EXIT PERFORM               *> Exit inline perform  
+        END-IF  
+        IF WS-ARRAY(WS-INDEX) = WS-SEARCH-VALUE *> Search text  
+          DISPLAY "Value found!"  
+          EXIT PERFORM               *> Mission accomplished.
+        END-IF  
+        IF WS-ARRAY(WS-INDEX) = SPACES   *> No more values  
+          DISPLAY "Reached end of array values. None found."  
+          EXIT PERFORM                   *> Exit inline perform  
+        END-IF  
+      END-PERFORM
+      .
+    1000-EXIT.
+      EXIT.  
 
-    MOVE 'WIDGET' TO WS-SEARCH-VALUE  
-    MOVE 0 TO WS-INDEX  
-    PERFORM 999999999 TIMES  *> Endless loop. Inline perform.
-      ADD 1 TO WS-INDEX  
-      IF WS-INDEX > WS-ARRAY-SIZE *> Avoid array overflow  
-        DISPLAY "Reached end of array. None found."  
-        EXIT PERFORM              *> Exit inline perform  
-      END-IF  
-      IF WS-ARRAY(WS-INDEX) = WS-SEARCH-VALUE *> Search text  
-        DISPLAY "Value found!"  
-        EXIT PERFORM  *> Mission accomplished. Stop looping.
-      END-IF  
-      IF WS-ARRAY(WS-INDEX) = SPACES *> No more values  
-        DISPLAY "Reached end of array values. None found."  
-        EXIT PERFORM              *> Exit inline perform  
-      END-IF  
-    END-PERFORM  
 
-***Tags : EXIT PERFORM, COBOL EXIT***
+## What's the story?
+
+The above COBOL code searches in an array, serially.  It stops 
+searching when the desired text is found, or when it reached an
+empty array element, or when it reached the end of the array.
+
+As of November 2020, inline perform maximum times limit is 999999999.
+
+
+## How about GO TO?
+If your shop is not strict, here is the GO TO equivalent of the algorithm:
+
+    1000-COBOL-SEARCH SECTION.
+      MOVE 'WIDGET' TO WS-SEARCH-VALUE  
+      MOVE 0 TO WS-INDEX  
+      PERFORM 999999999 TIMES        *> Endless inline perform
+        ADD 1 TO WS-INDEX  
+        IF WS-INDEX > WS-ARRAY-SIZE  *> Avoid array overflow  
+          DISPLAY "Reached end of array. None found."  
+          GO TO 1000-EXIT            *> Exit section
+        END-IF  
+        IF WS-ARRAY(WS-INDEX) = WS-SEARCH-VALUE *> Search text  
+          DISPLAY "Value found!"     *> Mission accomplished.
+          GO TO 1000-EXIT            *> Exit section
+        END-IF  
+        IF WS-ARRAY(WS-INDEX) = SPACES   *> No more values  
+          DISPLAY "Reached end of array values. None found."  
+          GO TO 1000-EXIT            *> Exit section  
+        END-IF  
+      END-PERFORM  
+      .
+    1000-EXIT.
+      EXIT.  
+
+
+
+## How about nested IFs?
+Absolutely, but it is my least favorite.  I think it is harder
+to do a 100% coverage testing and harder to do future code 
+revisions - like adding a couple more IF conditions.
+
+    1000-COBOL-SEARCH SECTION.
+      MOVE 'WIDGET' TO WS-SEARCH-VALUE  
+      MOVE 0 TO WS-INDEX  
+      SET END-OF-LOOP TO FALSE
+      PERFORM UNTIL END-OF-LOOP              *> Loop indicator flag
+        ADD 1 TO WS-INDEX  
+        IF WS-INDEX > WS-ARRAY-SIZE          *> Avoid array overflow  
+          DISPLAY "Reached end of array. None found."  
+          SET END-OF-LOOP TO TRUE            *> Exit loop
+        ELSE  
+          IF WS-ARRAY(WS-INDEX) = WS-SEARCH-VALUE *> Search text  
+            DISPLAY "Value found!"           *> Mission accomplished.
+            SET END-OF-LOOP TO TRUE          *> Exit loop
+          ELSE  
+            IF WS-ARRAY(WS-INDEX) = SPACES   *> No more values  
+              DISPLAY "Reached end of array values. None found."  
+              SET END-OF-LOOP TO TRUE        *> Exit loop
+            END-IF
+          END-IF
+        END-IF
+      END-PERFORM  
+      .
+    1000-EXIT.
+      EXIT.  
+
+
+Tags : EXIT PERFORM, COBOL EXIT, z/OS COBOL, GOTO
