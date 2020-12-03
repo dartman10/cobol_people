@@ -16,6 +16,8 @@
       link: '/usage/hex-of'
     - label: 'NESTED PROGRAM'
       link: '/usage/subprogram-01'
+    - label: 'REVERSE String'
+      link: '/usage/reverse-string'
 - label: More
   items:
     - label: Summary of Changes

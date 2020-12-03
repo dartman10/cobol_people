@@ -1,0 +1,21 @@
+---
+title: COBOL REVERSE
+date: "2020-12-02T12:12:03.284Z"
+description: "Using REVERSE intrinsic function"
+---
+**How to use COBOL REVERSE string command**
+
+    WORKING-STORAGE SECTION.
+    01 WS-STRING PIC X(8) VALUE 'LET ME  '.
+
+    PROCEDURE DIVISION.
+      DISPLAY 'WS-STRING = ' '|' WS-STRING '|'
+      MOVE FUNCTION REVERSE(WS-STRING) TO WS-STRING
+      DISPLAY 'WS-STRING = ' '|' WS-STRING '|'
+      GOBACK.
+
+***SYSOUT Result***
+    WS-STRING = |LET ME  |
+    WS-STRING = |  EM TEL|
+
+***Tags : COBOL REVERSE STRING***
