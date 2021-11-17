@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `Cobol-People`,
-    defaultTitle: `cobol-people`,
-    siteTitleShort: `cobol-people`,
-    siteDescription: `CobolPeople.com - the people of Cobol unite.`,
-    siteUrl: `https://CobolPeople.com`,
+    siteTitle: `PinoyP2E.com`,
+    defaultTitle: `PinoyP2E`,
+    siteTitleShort: `PP2E`,
+    siteDescription: `PinoyP2E.com - kabayan magtulungan.`,
+    siteUrl: `https://PinoyP2E.com`,
     siteAuthor: `@TRexy`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,

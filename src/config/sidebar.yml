@@ -1,30 +1,10 @@
 # Sidebar navigation
 
-- label: 'Hello World'
+- label: 'PinoyP2E'
   link: '/'
-- label: ''
-  link: ''
-- label: COBOLISH
+- label: 'Menu'
   items:
-    - label: 'EXIT PERFORM'
-      link: '/usage/exit-perform'
-    - label: 'DATE YYYYMMDD'
-      link: '/usage/date-yyyymmdd'
-    - label: 'S0C7'
-      link: '/usage/s0c7'
-    - label: 'HEX-OF'
-      link: '/usage/hex-of'
-    - label: 'NESTED PROGRAM'
-      link: '/usage/subprogram-01'
-    - label: 'REVERSE String'
-      link: '/usage/reverse-string'
-- label: More
-  items:
-    - label: Summary of Changes
-      link: /changelog
-    - label: FAQ
-      link: /faq
-- label: Community
-  items:
-    - label: 'Github'
-      link: https://github.com/rocketseat/gatsby-themes
+    - label: 'About Us'
+      link: '/usage/about-us'
+    - label: 'FAQ'
+      link: '/usage/faq'
