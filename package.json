@@ -1,28 +1,27 @@
 {
-  "name": "gatsby-starter-rocket-docs",
+  "name": "gatsby-starter-rocketdocs",
   "private": true,
   "version": "1.0.0",
   "description": "Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more",
-  "author": "João Pedro Schmitz <oi@joaopedro.cc> (@jpedroschmitz)",
+  "author": "João Pedro Schmitz <hey@joaopedro.dev> (@jpedroschmitz)",
   "license": "MIT",
-  "starter-name": "gatsby-starter-rocket-docs",
+  "starter-name": "gatsby-starter-rocketdocs",
   "dependencies": {
-    "@rocketseat/gatsby-theme-docs": "^2.2.4",
-    "gatsby": "^2.25.3",
-    "gatsby-plugin-canonical-urls": "^2.3.12",
-    "gatsby-plugin-google-analytics": "^2.3.15",
-    "gatsby-plugin-manifest": "^2.4.33",
-    "gatsby-plugin-offline": "^3.2.30",
-    "gatsby-plugin-remove-trailing-slashes": "^2.3.13",
-    "gatsby-plugin-sitemap": "^2.4.14",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@rocketseat/gatsby-theme-docs": "^4.0.0",
+    "gatsby": "^5.9.0",
+    "gatsby-plugin-canonical-urls": "^5.9.0",
+    "gatsby-plugin-google-analytics": "^5.9.0",
+    "gatsby-plugin-manifest": "^5.9.0",
+    "gatsby-plugin-offline": "^6.9.0",
+    "gatsby-plugin-remove-trailing-slashes": "^4.2.0",
+    "gatsby-plugin-sitemap": "^6.9.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {},
   "keywords": [
     "gatsby",
-    "rocketseat",
     "gatsby-starter"
   ],
   "scripts": {
