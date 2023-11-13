@@ -20,8 +20,6 @@
       link: '/usage/reverse-string'
 - label: More
   items:
-    - label: Summary of Changes
-      link: /changelog
     - label: FAQ
       link: /faq
 - label: Community
